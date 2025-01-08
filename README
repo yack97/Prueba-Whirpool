@@ -1,0 +1,132 @@
+# BI Analyst Challenge - Store123
+
+This repository contains the complete solution for the BI Analyst Challenge provided by Store123. The analysis focuses on the impact of currency fluctuations, particularly the Argentine **dólar blue**, on the company's financial operations during Q4 2024.
+
+## Project Structure
+
+### **1. Data**
+Contains the processed and raw data files used for analysis, including:
+- **Facturación Data**: Details of Store123 sales during Q4 2024.
+- **Maestro Data**: SKU and category information for products.
+- **Dólar Blue Exchange Rates**: Historical and simulated values for Q4 2024.
+
+### **2. Scripts**
+Python and SQL scripts for:
+- Data preparation and cleaning.
+- Aggregations and analysis.
+- Visualization and reporting.
+
+### **3. Reports**
+- **Google Slides**: Summarized findings with charts and insights.
+- **Google Sheets**: Aggregated data and automated email alerts for exchange rate changes.
+
+### **4. Documentation**
+Insights, methodology, and recommendations for financial decision-making.
+
+---
+
+## Key Features
+
+### **1. Data Preparation**
+- Filtered and cleaned sales data to include only Q4 2024 transactions.
+- Integrated historical and simulated dólar blue exchange rates for accurate USD conversions.
+
+### **2. Data Analysis**
+- Aggregated sales by category to identify revenue trends and product performance.
+- Highlighted key dates with high and low sales activity.
+- Evaluated the impact of exchange rate volatility on financial results.
+
+### **3. Automations**
+- Google Sheets integration for real-time data updates.
+- Automated email notifications triggered by significant exchange rate fluctuations.
+
+### **4. Data Visualization**
+- Charts and graphs in Google Slides, connected dynamically to Google Sheets.
+- Interactive dashboard for deep exploration of sales trends and financial impacts.
+
+---
+
+## How to Use
+
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/your-username/bi-analyst-challenge.git
+```
+
+### **2. Install Dependencies**
+Ensure the following Python libraries are installed:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `openpyxl`
+
+Install them using:
+```bash
+pip install -r requirements.txt
+```
+
+### **3. Execute the Analysis**
+Run the main script to process data and generate results:
+```bash
+python main_analysis.py
+```
+
+### **4. Access Reports**
+- View insights and summaries in the connected Google Sheets and Slides.
+
+---
+
+## Key Insights for Financial Decision-Making
+
+1. **Exchange Rate Volatility**
+   - The rising dólar blue impacts revenue conversion, necessitating dynamic pricing strategies.
+
+2. **Category Performance**
+   - Pulverizadores lead in USD revenue, highlighting high-value product opportunities.
+
+3. **Sales Trends**
+   - Peak sales occur at month-end, presenting an opportunity for synchronized promotions.
+
+---
+
+## References
+
+### **Data Sources**
+- **Store123 Sales Data**: Facturación and Maestro datasets.
+- **Exchange Rates**: Historical and simulated dólar blue values from trusted sources.
+
+### **Tools**
+- **Google Sheets**: For automated updates and real-time analysis.
+- **Google Slides**: For professional reporting and presentation.
+- **Python**: For robust data processing and visualization.
+
+---
+
+## Author
+
+**Yadir Acuña**
+Data Analytics and BI Professional
+[LinkedIn Profile](https://www.linkedin.com/in/yadiracuña)
+
+---
+
+## Example Code
+
+Here is an example of the Python code used in this project:
+
+```python
+import pandas as pd
+import numpy as np
+
+# Load data
+ruta_archivo_facturacion = 'Facturación_Store123.csv'
+ruta_archivo_maestro = 'Maestro.csv'
+
+df_facturacion = pd.read_csv(ruta_archivo_facturacion)
+df_maestro = pd.read_csv(ruta_archivo_maestro)
+
+# Process data
+filtered_data = df_facturacion[df_facturacion['Fecha de facturacion'].str.contains('2024')]
+```
+
+This script demonstrates the filtering of sales data for Q4 2024 and sets the foundation for further analysis. For a complete walkthrough, refer to the `Scripts` directory in this repository.
